@@ -1,6 +1,6 @@
 ---
 name: ai-tropes-scan
-description: Scan prose for AI writing tropes and rewrite them out. Covers the full tropes.fyi catalog - magic adverbs, "delve/leverage/robust" vocabulary, negative parallelism, tricolon stacking, em-dash addiction, bold-first bullets, promotional language, preambles, reasoning leaks, tie-backs, quotable one-liners, signposted conclusions, one-point dilution, and more. Use when asked to "tropes-check", "scan for AI tells", "make this sound less like AI", or "run this through tropes.fyi".
+description: Scan prose for AI writing tropes and rewrite them out. Covers the full tropes.fyi catalog - magic adverbs, "delve/leverage/robust" vocabulary, negative parallelism, tricolon stacking, em-dash addiction, bold-first bullets, promotional language, preambles, reasoning leaks, tie-backs, quotable one-liners, signposted conclusions, one-point dilution, and more. Also sets rules for how to answer the user. Use when asked to "tropes-check", "scan for AI tells", "make this sound less like AI", or "run this through tropes.fyi".
 ---
 
 # AI writing tropes to avoid
@@ -9,10 +9,24 @@ Source: [tropes.fyi](https://tropes.fyi) by [ossama.is](https://ossama.is).
 
 Any one of these used once can be fine. The tell is several together, or one repeated. Write varied, imperfect, specific prose.
 
+Check these first. tropes.fyi marks them new or rising in current models: reasoning leak, premise stacking, preamble, compulsive counting, belaboring the unnecessary, self-echo, quotable one-liners, forced figurative language, never-ending conclusion, comma-clipped trailing phrase, synonym cycling, appeal to familiarity, promotional language, "Where / What / Why" headers, "where it actually lives", short punchy fragments, grandiose stakes inflation, invented concept labels, fractal summaries and excessive enumeration. It marks "delve", "Imagine a world", false ranges and most of the rhetorical tropes as fading.
+
+## How to respond
+
+These rules cover replies to the user as well as written prose. They come from tropes.fyi's [Writing Whip](https://gist.github.com/ossa-ma/dae6f9571534f3fbd1266a384be00e11).
+
+- Lead with the answer, the fix or the change. Do not restate the question.
+- Stop when the answer is given.
+- Give the answer, not the reasoning. Explain only when asked.
+- Do not verify, explore or fix anything nobody asked for. Ask first.
+- When something is wrong, delete the wrong part. Do not add a correction on top of it.
+- Match the detail of the answer to the detail of the ask. Offer to expand instead of expanding.
+- Do not soften the answer to manage the reader's feelings.
+
 ## Word choice
 
 ### Magic adverbs
-"Quietly", "deeply", "fundamentally", "remarkably", "arguably" added to make a mundane description feel significant.
+"Quietly", "deeply", "fundamentally", "remarkably", "arguably", "unusually well [X]" added to make a mundane description feel significant.
 - "quietly orchestrating workflows, decisions, and interactions"
 - "a quiet intelligence behind it"
 
@@ -21,8 +35,12 @@ The overused AI vocabulary: "delve", "certainly", "utilize", "leverage" (as a ve
 - "We certainly need to leverage these robust frameworks..."
 
 ### "Tapestry" and "landscape"
-Ornate nouns where a plain word works. Also "paradigm", "synergy", "ecosystem", "framework".
+Ornate nouns where a plain word works. Also "paradigm", "synergy", "ecosystem", "framework", "load-bearing", "gated".
 - "Navigating the complex landscape of modern AI..."
+
+### Stock phrases
+Set phrases dropped in where a plain description fits. Not in tropes.fyi; added from use.
+- "what you've had on repeat"
 
 ### The "serves as" dodge
 "Serves as", "stands as", "marks", "represents" used to avoid a plain "is".
@@ -39,7 +57,7 @@ Describing where something comes from as if it physically lives there, in place 
 ## Sentence structure
 
 ### Negative parallelism
-"It's not X, it's Y": the most commonly identified AI tell. It frames every point as a surprising reframe. Includes "not because X, but because Y", "X, not Y", and the cross-sentence version "The question isn't X. The question is Y."
+"It's not X, it's Y": the most commonly identified AI tell. It frames every point as a surprising reframe. Includes "not because X, but because Y", "X, not Y", "X -- not Y", "X doesn't just Y, it Z", the cross-sentence version "The question isn't X. The question is Y.", and negating a noun in one sentence to reposition it in the next.
 - "It's not bold. It's backwards."
 - "The real issue isn't technical. The real issue is organizational."
 
@@ -57,7 +75,7 @@ The same sentence opening repeated in quick succession.
 - "They assume that users will pay... They assume that developers will build... They assume that..."
 
 ### Rule of three
-Tricolons back to back, or stretched to four or five items. One is fine; a string of them is a pattern.
+Tricolons back to back, or stretched to four or five items. One tricolon per piece is the limit, and never two in a row.
 - "Products impress people; platforms empower them. Products solve problems; platforms create worlds."
 
 ### "It's worth noting"
@@ -67,6 +85,7 @@ Filler transitions that connect nothing: "it bears mentioning", "importantly", "
 A trailing "-ing" phrase that attaches fake significance to a plain fact.
 - "...contributing to the region's rich cultural heritage"
 - "...underscoring its role as a dynamic hub of activity and culture"
+- "...highlighting its importance", "...reflecting broader trends"
 
 ### False ranges
 "From X to Y" where X and Y sit on no real scale, so there is nothing in between.
@@ -89,7 +108,7 @@ A listicle disguised as prose: "The first... The second... The third...", often 
 ## Tone
 
 ### "Here's the kicker"
-False-suspense transitions before an ordinary point: "here's the thing", "here's where it gets interesting", "here's what most people miss", "here's the deal".
+False-suspense transitions before an ordinary point: "here's the thing", "here's where it gets interesting", "here's what most people miss", "here's the deal", "but here's the catch". Also setups ending in "starting point", "rub", "secret", "takeaway" or "lesson".
 
 ### "Think of it as..."
 The patronizing analogy, "Think of it as..." or "It's like a...", often less clear than the original concept.
@@ -131,6 +150,7 @@ A domain word plus an abstract noun (paradox, trap, creep, divide, vacuum, inver
 ### Compulsive counting
 Stating the number of items before listing them, as if the count were the achievement.
 - "Four reasons why this will work"
+- "One endpoint, rather than four, for two reasons."
 
 ### Quotable one-liners
 A line built to be pulled out as wisdom that carries no information.
@@ -150,11 +170,13 @@ Switching an author's "I" to "we", losing the personal voice. Some authors do us
 Em dashes for every pause, aside and pivot. A person uses two or three in a piece; AI uses twenty.
 - "The problem -- and this is the part nobody talks about -- is systemic."
 
+Double hyphens (`--`) used in place of em dashes count too.
+
 ### Bold-first bullets
 Every list item opens with a bolded phrase. Common in AI-written docs and READMEs, rare in anything typed by hand.
 
 ### Unicode decoration
-Arrows (→) and curly quotes that nobody types on a keyboard.
+Arrows (→) and curly quotes that nobody types on a keyboard. Type `->` and straight quotes.
 
 ### "Where / What / Why" headers
 Headings that start with a question word.
